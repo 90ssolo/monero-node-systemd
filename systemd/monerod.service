@@ -1,0 +1,34 @@
+[Unit]
+Description=Monero Daemon (monerod)
+Documentation=https://www.getmonero.org/resources/developer-guides/daemon-rpc.html
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=monero
+Group=monero
+ExecStart=/usr/local/bin/monerod --config-file=/etc/monero/monerod.conf --non-interactive
+Restart=on-failure
+RestartSec=15
+TimeoutStopSec=120
+KillSignal=SIGINT
+
+# Filesystem & Privilege Sandboxing
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+ReadWritePaths=/var/lib/monero /var/log/monero
+ReadOnlyPaths=/etc/monero
+
+# Resource Limits
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

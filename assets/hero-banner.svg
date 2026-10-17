@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="auto" role="img" aria-label="Monero Node Systemd Setup">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="60%" stop-color="#141a23"/>
+      <stop offset="100%" stop-color="#1b1510"/>
+    </linearGradient>
+    <linearGradient id="xmr" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff6600"/>
+      <stop offset="100%" stop-color="#ff8533"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="320" rx="16" fill="url(#bg)" stroke="#30363d" stroke-width="2"/>
+  <rect x="0" y="0" width="1200" height="5" rx="2" fill="url(#xmr)"/>
+
+  <!-- Official Monero Symbol -->
+  <g transform="translate(56, 56) scale(0.28)">
+    <circle cx="128" cy="128" r="128" fill="#ffffff"/>
+    <path fill="#FF6600" d="M127.998,0.001 C57.309,0.001 0,57.306 0,127.999 C0,142.129 2.29,155.724 6.517,168.436 L44.797,168.436 L44.797,61.033 L127.999,144.234 L211.2,61.033 L211.2,168.436 L249.48,168.436 C253.708,155.724 255.997,142.129 255.997,127.999 C255.996,57.306 198.688,0.001 127.998,0.001 Z"/>
+    <path fill="#4C4C4C" d="M108.876,163.362 L72.036,126.522 L72.036,195.21 L38.209,195.21 L18.361,195.21 C40.822,231.693 81.539,256.0 127.998,256.0 C174.458,256.0 215.174,231.693 237.637,195.21 L217.789,195.21 L183.961,195.21 L183.961,126.522 L147.121,163.362 L127.998,182.485 L108.876,163.362 L108.876,163.362 Z"/>
+  </g>
+
+  <text x="144" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ff6600" letter-spacing="1.5">BARE-METAL LINUX &amp; ARM64 INFRASTRUCTURE</text>
+  <text x="144" y="122" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" fill="#f0f6fc">Monero Node Systemd Setup</text>
+
+  <text x="56" y="168" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#8b949e">Hardened systemd service, GPG + SHA-256 binary verifier, UFW firewall rules, and reverse</text>
+  <text x="56" y="194" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#8b949e">proxy configs for running monerod natively on Ubuntu, Debian, and Raspberry Pi 5 (ARM64).</text>
+
+  <!-- Feature Badges -->
+  <g transform="translate(56, 232)" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600">
+    <rect x="0" y="0" width="168" height="36" rx="18" fill="#161b22" stroke="#ff6600" stroke-width="1.5"/>
+    <circle cx="20" cy="18" r="5" fill="#ff6600"/>
+    <text x="34" y="23" fill="#f0f6fc">x86_64 &amp; ARM64</text>
+
+    <rect x="182" y="0" width="174" height="36" rx="18" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+    <circle cx="202" cy="18" r="5" fill="#3fb950"/>
+    <text x="216" y="23" fill="#f0f6fc">GPG + SHA256 Check</text>
+
+    <rect x="370" y="0" width="176" height="36" rx="18" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <circle cx="390" cy="18" r="5" fill="#58a6ff"/>
+    <text x="404" y="23" fill="#f0f6fc">Sandboxed Systemd</text>
+
+    <rect x="560" y="0" width="154" height="36" rx="18" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+    <circle cx="580" cy="18" r="5" fill="#d29922"/>
+    <text x="594" y="23" fill="#f0f6fc">Nginx &amp; Caddy</text>
+  </g>
+
+  <!-- Right Side Summary Card -->
+  <g transform="translate(765, 42)">
+    <rect x="0" y="0" width="385" height="236" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="22" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#ff6600">SYSTEMD HARDENING //PATHS</text>
+    <line x1="22" y1="46" x2="363" y2="46" stroke="#30363d" stroke-width="1"/>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
+      <text x="22" y="74" fill="#8b949e">Binary</text>
+      <text x="118" y="74" fill="#c9d1d9">/usr/local/bin/monerod</text>
+
+      <text x="22" y="104" fill="#8b949e">Config</text>
+      <text x="118" y="104" fill="#c9d1d9">/etc/monero/monerod.conf</text>
+
+      <text x="22" y="134" fill="#8b949e">LMDB Data</text>
+      <text x="118" y="134" fill="#c9d1d9">/var/lib/monero/lmdb</text>
+
+      <text x="22" y="164" fill="#8b949e">Service User</text>
+      <text x="118" y="164" fill="#c9d1d9">monero:monero (nologin)</text>
+    </g>
+
+    <rect x="22" y="190" width="341" height="28" rx="6" fill="#0d1117" stroke="#238636" stroke-width="1"/>
+    <text x="34" y="208" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" fill="#3fb950">✓ ProtectSystem=strict + NoNewPrivileges</text>
+  </g>
+</svg>

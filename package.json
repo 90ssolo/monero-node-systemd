@@ -1,0 +1,11 @@
+{
+  "name": "monero-node-systemd",
+  "version": "1.0.0",
+  "description": "Bare-metal Linux & ARM64 setup for running a hardened Monero node (monerod) with systemd sandboxing, GPG + SHA-256 binary verification, UFW firewall rules, and Nginx/Caddy HTTPS CORS proxy.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node scripts/validate.mjs",
+    "validate": "node scripts/validate.mjs"
+  }
+}
